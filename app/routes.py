@@ -7,5 +7,15 @@ from app import app
 @app.route('/index')
 def index():
     user = {'username': 'Alen'}
-    page = render_template('index.html', title='Home', user= user)
+    posts = [
+        {
+            'author': {'username': 'Max'},
+            'body': 'Hello everybody!'
+        },
+        {
+            'author': {'username': 'Lily'},
+            'body': 'HI!'
+        }
+    ]
+    page = render_template('index.html', title='Home', user=user, posts=posts)
     return page
