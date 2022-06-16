@@ -30,4 +30,3 @@ def login():
         return redirect(url_for('index'))
     # login page
     return render_template('login.html', title='Sing In', form=form)
-
