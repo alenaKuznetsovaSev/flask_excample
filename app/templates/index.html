@@ -1,6 +1,10 @@
 <html>
     <head>
-        <title>{{ title }}- Flask Site</title>
+        {% if title %}
+            <title>{{ title }} - Flask Site</title>
+        {% else %}
+            <title>{{ title }} - Flask Site</title>
+        {% endif %}
     </head>
     <body>
         <h1>Hello, {{ user.username }}!</h1>
